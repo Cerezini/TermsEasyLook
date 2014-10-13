@@ -1,0 +1,71 @@
+body {
+	font-family: Calibri;
+}
+
+h1 {
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+}
+
+ol {
+	counter-reset: item;
+}
+
+li {
+	display: block;
+	text-align: justify;
+	font-size: 16px;
+}
+
+li:before {
+	content: counters(item, ".") ". "; 
+	counter-increment: item;
+}
+
+#e1 {
+	text-decoration: underline;
+}
+
+#e2 {
+	text-decoration: underline;
+	font-style: italic;
+}
+/*
+#hdif {
+	font-weight: normal;
+}*/
+
+#list1  li{
+	margin-top: 17px;
+}
+
+#list1 {
+	list-style-position: outside;
+	padding-left: 0;
+}
+
+#li1 {
+	list-style-position: outside;
+	margin-left: 60px;
+}
+
+#list2 li {
+	margin-top: 0px;
+}
+
+#list3  {
+	list-style-type: lower-latin;
+}
+
+#sub p {
+	padding-left: 100px;
+}
+
+
+
