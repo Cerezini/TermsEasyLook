@@ -13,7 +13,7 @@ p {
 	text-align: justify;
 }
 
-ol {
+/*ol {
 	counter-reset: item;
 }
 
@@ -26,7 +26,7 @@ li {
 li:before {
 	content: counters(item, ".") ". "; 
 	counter-increment: item;
-}
+}*/
 
 #e1 {
 	text-decoration: underline;
@@ -46,7 +46,7 @@ li:before {
 }
 
 #list1 {
-	list-style-position: outside;
+	list-style-position: inside;
 	padding-left: 0;
 }
 
@@ -59,13 +59,54 @@ li:before {
 	margin-top: 0px;
 }
 
+#list2 {
+	margin-top: 17px;
+}
+
 #list3  {
-	list-style-type: lower-latin;
+	margin-top: 17px;
+}
+
+#list3 li{
+	list-style-type: lower-alpha;
+	list-style-position:outside;
+	margin-top: 0px;
+}
+
+#list4  {
+	margin-top: 17px;
+}
+
+#list4 li{
+	list-style-type: lower-alpha;
+	list-style-position:outside;
+	margin-top: 17px;
 }
 
 #sub p {
 	padding-left: 100px;
 }
 
+ol.nested{
+    counter-reset: item;
+}
 
+li.nested {
+    display: block;
+	text-align: justify;
+	
+}
 
+li.nested:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+
+a {
+	text-decoration: underline;
+	color: blue;
+}
+
+a:hover {
+	cursor: pointer;
+}
