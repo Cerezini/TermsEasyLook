@@ -9,6 +9,10 @@ h1 {
 	text-align: center;
 }
 
+#h1 {
+	font-weight: normal;
+}
+
 p {
 	text-align: justify;
 }
@@ -52,7 +56,7 @@ li:before {
 
 #li1 {
 	list-style-position: outside;
-	margin-left: 60px;
+	margin-left: 50px;
 }
 
 #list2 li {
@@ -68,7 +72,6 @@ li:before {
 }
 
 #list3 li{
-	list-style-type: lower-alpha;
 	list-style-position:outside;
 	margin-top: 0px;
 }
@@ -78,28 +81,50 @@ li:before {
 }
 
 #list4 li{
-	list-style-type: lower-alpha;
-	list-style-position:outside;
+	list-style-position: outside;
 	margin-top: 17px;
 }
+/* novo codigo que coloca "x)" nos marcadores*/
+#list4{
+  counter-reset: list;
+}
+#list4 li {
+  list-style: none;
+}
+#list4 li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+}
+
+#list3{
+  counter-reset: list;
+}
+#list3 li {
+  list-style: none;
+}
+#list3 li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+}
+/* fim do novo código*/
 
 #sub p {
 	padding-left: 100px;
 }
 
 ol.nested{
-    counter-reset: item;
+    counter-reset: list-item;
 }
 
 li.nested {
     display: block;
 	text-align: justify;
-	
 }
 
 li.nested:before {
-    content: counters(item, ".") ". ";
-    counter-increment: item;
+    content: counters(list-item, ".") ". ";
+    counter-increment: list-item;
+	list-style-position:outside;
 }
 
 a {
